@@ -1,0 +1,16 @@
+{
+    "name": "hexlet/code",
+    "require": {
+        "docopt/docopt": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Hexlet\\Code\\": "src/"
+        },
+        "files": [
+        ]
+    },
+    "bin": [
+        "bin/gendiff"
+    ]
+}
