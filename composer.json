@@ -8,6 +8,8 @@
             "Hexlet\\Code\\": "src/"
         },
         "files": [
+            "src/HelpReader.php",
+            "src/DiffGenerator.php"
         ]
     },
     "bin": [
