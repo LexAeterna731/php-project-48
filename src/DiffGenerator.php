@@ -2,7 +2,8 @@
 
 namespace Hexlet\Code\DiffGenerator;
 
-function isBoolean($value) {
+function isBoolean($value)
+{
     $result = $value;
 
     if (is_bool($result)) {
