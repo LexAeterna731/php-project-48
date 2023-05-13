@@ -1,7 +1,8 @@
 {
     "name": "hexlet/code",
     "require": {
-        "docopt/docopt": "^1.0"
+        "docopt/docopt": "^1.0",
+        "symfony/yaml": "^6.2"
     },
     "autoload": {
         "psr-4": {
@@ -9,7 +10,8 @@
         },
         "files": [
             "src/HelpReader.php",
-            "src/DiffGenerator.php"
+            "src/DiffGenerator.php",
+            "src/Parcer.php"
         ]
     },
     "bin": [

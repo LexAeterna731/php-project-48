@@ -2,6 +2,8 @@
 
 namespace Hexlet\Code\DiffGenerator;
 
+use function Hexlet\Code\Parcer\getData;
+
 function isBoolean($value)
 {
     $result = $value;
@@ -33,8 +35,8 @@ function compareDiff($key, $firstFile, $secondFile)
 
 function generateDiff(string $firstFilePath, string $secondFilePath)
 {
-    $firstFile = json_decode(file_get_contents(realpath($firstFilePath)), true);
-    $secondFile = json_decode(file_get_contents(realpath($secondFilePath)), true);
+    $firstFile = getData($firstFilePath);
+    $secondFile = getData($secondFilePath);
 
     $firstKeysArray = array_keys($firstFile);
     $secondKeysArray = array_keys($secondFile);

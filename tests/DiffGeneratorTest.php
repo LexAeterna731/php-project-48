@@ -10,6 +10,8 @@ class DiffGeneratorTest extends TestCase
 {
     private $pathToJson1;
     private $pathToJson2;
+    private $pathToYml1;
+    private $pathToYml2;
     private $pathToExpected;
 
     private function getFixturePath($fixtureName): string
@@ -22,11 +24,15 @@ class DiffGeneratorTest extends TestCase
     {
         $pathToJson1 = $this->getFixturePath('file1.json');
         $pathToJson2 = $this->getFixturePath('file2.json');
-        $pathToExpected = $this->getFixturePath('jsonExpected.txt');
+        $pathToYml1 = $this->getFixturePath('file1.yml');
+        $pathToYml2 = $this->getFixturePath('file2.yml');
+        $pathToExpected = $this->getFixturePath('expected.txt');
 
-        $result = generateDiff($pathToJson1, $pathToJson2);
+        $resultJson = generateDiff($pathToJson1, $pathToJson2);
+        $resultYml = generateDiff($pathToYml1, $pathToYml2);
         $expected = file_get_contents($pathToExpected);
 
-        $this->assertEquals($expected, $result);
+        $this->assertEquals($expected, $resultJson);
+        $this->assertEquals($expected, $resultYml);
     }
 }

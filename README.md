@@ -4,6 +4,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/add317e68f0215661b39/maintainability)](https://codeclimate.com/github/LexAeterna731/php-project-48/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/add317e68f0215661b39/test_coverage)](https://codeclimate.com/github/LexAeterna731/php-project-48/test_coverage)
 
-### Demo
+### Demos
 
 [![asciicast](https://asciinema.org/a/wIWvcrFkxedYKjPpZDKbpzdLq.svg)](https://asciinema.org/a/wIWvcrFkxedYKjPpZDKbpzdLq)
+[![asciicast](https://asciinema.org/a/mWZE1ruVicaeb3lEkMMnsFbHk.svg)](https://asciinema.org/a/mWZE1ruVicaeb3lEkMMnsFbHk)
