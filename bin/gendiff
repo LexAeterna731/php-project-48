@@ -17,6 +17,6 @@ $doc = readHelp();
 
 $args = Docopt::handle($doc, array('version'=>'Generate diff 1.0'));
 
-$result = generateDiff($args['<firstFile>'], $args['<secondFile>']);
+$result = generateDiff($args['<firstFile>'], $args['<secondFile>'], $args['--format']);
 
 print_r($result);

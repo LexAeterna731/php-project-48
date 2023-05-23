@@ -11,7 +11,10 @@
         "files": [
             "src/HelpReader.php",
             "src/DiffGenerator.php",
-            "src/Parcer.php"
+            "src/Parcer.php",
+            "src/DiffArray.php",
+            "src/Formatter.php",
+            "src/Formatters/Stylish.php"
         ]
     },
     "bin": [

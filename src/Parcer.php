@@ -23,5 +23,7 @@ function parceJson($pathToJson): array
 
 function parceYml($pathToYml): array
 {
-    return Yaml::parseFile($pathToYml); //доработать с флагом Yaml::PARSE_OBJECT_FOR_MAP
+    $object = Yaml::parseFile($pathToYml, Yaml::PARSE_OBJECT_FOR_MAP);
+
+    return json_decode(json_encode($object), true);
 }
