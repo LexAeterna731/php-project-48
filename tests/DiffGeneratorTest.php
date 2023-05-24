@@ -27,12 +27,20 @@ class DiffGeneratorTest extends TestCase
         $pathToYml1 = $this->getFixturePath('file1.yml');
         $pathToYml2 = $this->getFixturePath('file2.yml');
         $pathToExpected = $this->getFixturePath('expected.txt');
+        $pathToPlain = $this->getFixturePath('plain.txt');
 
         $resultJson = generateDiff($pathToJson1, $pathToJson2);
         $resultYml = generateDiff($pathToYml1, $pathToYml2);
         $expected = file_get_contents($pathToExpected);
 
+        $resultJsonPlain = generateDiff($pathToJson1, $pathToJson2, 'plain');
+        $resultYmlPlain = generateDiff($pathToYml1, $pathToYml2, 'plain');
+        $plain = file_get_contents($pathToPlain);
+
         $this->assertEquals($expected, $resultJson);
         $this->assertEquals($expected, $resultYml);
+
+        $this->assertEquals($plain, $resultJsonPlain);
+        $this->assertEquals($plain, $resultYmlPlain);
     }
 }

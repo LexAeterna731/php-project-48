@@ -14,7 +14,8 @@
             "src/Parcer.php",
             "src/DiffArray.php",
             "src/Formatter.php",
-            "src/Formatters/Stylish.php"
+            "src/Formatters/Stylish.php",
+            "src/Formatters/Plain.php"
         ]
     },
     "bin": [

@@ -5,7 +5,11 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/add317e68f0215661b39/test_coverage)](https://codeclimate.com/github/LexAeterna731/php-project-48/test_coverage)
 
 ### Demos
-
+#### help
 [![asciicast](https://asciinema.org/a/wIWvcrFkxedYKjPpZDKbpzdLq.svg)](https://asciinema.org/a/wIWvcrFkxedYKjPpZDKbpzdLq)
+#### Flat structures
 [![asciicast](https://asciinema.org/a/mWZE1ruVicaeb3lEkMMnsFbHk.svg)](https://asciinema.org/a/mWZE1ruVicaeb3lEkMMnsFbHk)
+#### Default format
 [![asciicast](https://asciinema.org/a/vNlI5K3R6PZh0pAXYiHxTK64Y.svg)](https://asciinema.org/a/vNlI5K3R6PZh0pAXYiHxTK64Y)
+#### Plain format
+[![asciicast](https://asciinema.org/a/dzK3wkiplBFcBVMLlCIDI0bOh.svg)](https://asciinema.org/a/dzK3wkiplBFcBVMLlCIDI0bOh)
