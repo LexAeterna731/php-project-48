@@ -28,7 +28,7 @@ function plainFormat(array $diff): string
                         } elseif ($diffKey === "+") {
                             $singleDiffItem = "Property '{$currentWay}' was added with value: {$currentValue}";
                         }
-                    } elseif ($singleDiffSize === 2) {
+                    } else {
                         if ($diffKey === "-") {
                             $singleDiffItem = "Property '{$currentWay}' was updated. From {$currentValue} to ";
                         } elseif ($diffKey === "+") {

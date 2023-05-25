@@ -14,6 +14,8 @@ function formatDiff(array $diff, string $format): string
         $result = plainFormat($diff);
     } elseif ($format === 'json') {
         $result = jsonFormat($diff);
+    } else {
+        $result = "Wrong format. Use 'gendiff -h' for more information";
     }
 
     return $result;

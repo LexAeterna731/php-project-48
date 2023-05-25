@@ -3,7 +3,8 @@
     "require": {
         "docopt/docopt": "^1.0",
         "symfony/yaml": "^5.3",
-        "wp-cli/php-cli-tools": "^0.11.18"
+        "wp-cli/php-cli-tools": "^0.11.18",
+        "lstrojny/functional-php": "^1.17"
     },
     "autoload": {
         "psr-4": {
