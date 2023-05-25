@@ -13,7 +13,7 @@ function plainFormat(array $diff): string
             $singleKeyDiff = array_map(function ($diffKey, $diffValue) use ($currentWay, $singleDiffSize, $iter) {
                 if ($diffKey === '') {
                     if (!is_array($diffValue)) {
-                        $singleDiffItem = null;
+                        return null;
                     } else {
                         $singleDiffItem = $iter($diffValue, $currentWay);
                     }

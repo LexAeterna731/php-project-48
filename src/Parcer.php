@@ -4,7 +4,7 @@ namespace Differ\Parcer;
 
 use Symfony\Component\Yaml\Yaml;
 
-function getData(string $filePath)
+function getData(mixed $filePath)
 {
     $fileExtension = pathinfo($filePath, PATHINFO_EXTENSION);
     if ($fileExtension === "json") {
@@ -18,12 +18,12 @@ function getData(string $filePath)
     return $fileData;
 }
 
-function parceJson(string $pathToJson): array
+function parceJson(mixed $pathToJson): array
 {
     return json_decode(file_get_contents(realpath($pathToJson)), true);
 }
 
-function parceYml(string $pathToYml): array
+function parceYml(mixed $pathToYml): array
 {
     $object = Yaml::parseFile($pathToYml, Yaml::PARSE_OBJECT_FOR_MAP);
 
