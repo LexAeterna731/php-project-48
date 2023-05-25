@@ -20,9 +20,11 @@ function getData(mixed $filePath)
 
 function parceJson(mixed $pathToJson): array
 {
-    $data = file_get_contents(realpath($pathToJson));
-    if ($data === false) {
+    $path = realpath($pathToJson);
+    if ($path === false) {
         return [];
+    } else {
+        $data = file_get_contents($path);
     }
 
     return json_decode($data, true);
