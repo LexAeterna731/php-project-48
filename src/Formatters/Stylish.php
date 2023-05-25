@@ -8,7 +8,7 @@ function stylishFormat(array $diff): string
 {
     $iter = function ($currentDiff, $level) use (&$iter) {
         $iterMap = array_map(function ($key, $value) use ($level, $iter) {
-            $singleKeyDiff = array_map(function (mixed $diffKey, $diffValue) use ($key, $level, $iter) {
+            $singleKeyDiff = array_map(function ($diffKey, $diffValue) use ($key, $level, $iter) {
                 $indent = makeIndent($level, $diffKey);
                 if (is_array($diffValue)) {
                     $arrayDiffValue = $iter($diffValue, $level + 1);
@@ -33,7 +33,7 @@ function stylishFormat(array $diff): string
     return "{\n{$formattedResult}\n}";
 }
 
-function makeIndent(int $level, string $symbol = ''): string
+function makeIndent(int $level, string|int $symbol = ''): string
 {
     $firstPart = str_repeat("  ", $level * 2 - 1);
     $lastPart = $symbol === '' ? "  " : "{$symbol} ";

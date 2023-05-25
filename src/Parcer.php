@@ -20,12 +20,21 @@ function getData(mixed $filePath)
 
 function parceJson(mixed $pathToJson): array
 {
-    return json_decode(file_get_contents(realpath($pathToJson)), true);
+    $data = realpath($pathToJson);
+    if ($data === false) {
+        return [];
+    }
+
+    return json_decode(file_get_contents($data), true);
 }
 
 function parceYml(mixed $pathToYml): array
 {
     $object = Yaml::parseFile($pathToYml, Yaml::PARSE_OBJECT_FOR_MAP);
+    $data = json_encode($object);
+    if ($data === false) {
+        return [];
+    }
 
-    return json_decode(json_encode($object), true);
+    return json_decode($data, true);
 }
