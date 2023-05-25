@@ -1,12 +1,12 @@
 <?php
 
-namespace Hexlet\Code\Tests;
+namespace Differ\Tests;
 
 use PHPUnit\Framework\TestCase;
 
-use function Hexlet\Code\DiffGenerator\generateDiff;
+use function Differ\Differ\genDiff;
 
-class DiffGeneratorTest extends TestCase
+class DifferTest extends TestCase
 {
     private $pathToJson1;
     private $pathToJson2;
@@ -20,7 +20,7 @@ class DiffGeneratorTest extends TestCase
         return implode('/', $parts);
     }
 
-    public function testDiffGenerator(): void
+    public function testDiffer(): void
     {
         $pathToJson1 = $this->getFixturePath('file1.json');
         $pathToJson2 = $this->getFixturePath('file2.json');
@@ -30,16 +30,16 @@ class DiffGeneratorTest extends TestCase
         $pathToPlain = $this->getFixturePath('plain.txt');
         $pathToJson = $this->getFixturePath('json.txt');
 
-        $resultJson = generateDiff($pathToJson1, $pathToJson2);
-        $resultYml = generateDiff($pathToYml1, $pathToYml2);
+        $resultJson = genDiff($pathToJson1, $pathToJson2);
+        $resultYml = genDiff($pathToYml1, $pathToYml2);
         $expected = file_get_contents($pathToExpected);
 
-        $resultJsonPlain = generateDiff($pathToJson1, $pathToJson2, 'plain');
-        $resultYmlPlain = generateDiff($pathToYml1, $pathToYml2, 'plain');
+        $resultJsonPlain = genDiff($pathToJson1, $pathToJson2, 'plain');
+        $resultYmlPlain = genDiff($pathToYml1, $pathToYml2, 'plain');
         $plain = file_get_contents($pathToPlain);
 
-        $resultJsonJson = generateDiff($pathToJson1, $pathToJson2, 'json');
-        $resultYmlJson = generateDiff($pathToYml1, $pathToYml2, 'json');
+        $resultJsonJson = genDiff($pathToJson1, $pathToJson2, 'json');
+        $resultYmlJson = genDiff($pathToYml1, $pathToYml2, 'json');
         $json = file_get_contents($pathToJson);
 
         $this->assertEquals($expected, $resultJson);

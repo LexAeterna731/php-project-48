@@ -1,10 +1,10 @@
 <?php
 
-namespace Hexlet\Code\Formatter;
+namespace Differ\Formatter;
 
-use function Hexlet\Code\Formatters\Stylish\stylishFormat;
-use function Hexlet\Code\Formatters\Plain\plainFormat;
-use function Hexlet\Code\Formatters\Json\jsonFormat;
+use function Differ\Formatters\Stylish\stylishFormat;
+use function Differ\Formatters\Plain\plainFormat;
+use function Differ\Formatters\Json\jsonFormat;
 
 function formatDiff(array $diff, string $format): string
 {

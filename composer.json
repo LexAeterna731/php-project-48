@@ -7,11 +7,11 @@
     },
     "autoload": {
         "psr-4": {
-            "Hexlet\\Code\\": "src/"
+            "Differ\\": "src/"
         },
         "files": [
             "src/HelpReader.php",
-            "src/DiffGenerator.php",
+            "src/Differ.php",
             "src/Parcer.php",
             "src/DiffArray.php",
             "src/Formatter.php",

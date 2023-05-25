@@ -1,6 +1,6 @@
 <?php
 
-namespace Hexlet\Code\Formatters\Json;
+namespace Differ\Formatters\Json;
 
 function jsonFormat(array $diff): string
 {

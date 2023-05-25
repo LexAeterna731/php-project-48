@@ -1,6 +1,6 @@
 <?php
 
-namespace Hexlet\Code\HelpReader;
+namespace Differ\HelpReader;
 
 function readHelp()
 {

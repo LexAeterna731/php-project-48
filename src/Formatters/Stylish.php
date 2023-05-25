@@ -1,8 +1,8 @@
 <?php
 
-namespace Hexlet\Code\Formatters\Stylish;
+namespace Differ\Formatters\Stylish;
 
-use function Hexlet\Code\StringConverter\convertToString;
+use function Differ\StringConverter\convertToString;
 
 function stylishFormat(array $diff): string
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Hexlet\Code\Parcer;
+namespace Differ\Parcer;
 
 use Symfony\Component\Yaml\Yaml;
 

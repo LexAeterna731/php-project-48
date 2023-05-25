@@ -1,8 +1,8 @@
 <?php
 
-namespace Hexlet\Code\Formatters\Plain;
+namespace Differ\Formatters\Plain;
 
-use function Hexlet\Code\StringConverter\convertToString;
+use function Differ\StringConverter\convertToString;
 
 function plainFormat(array $diff): string
 {

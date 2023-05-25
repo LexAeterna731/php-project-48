@@ -1,6 +1,6 @@
 <?php
 
-namespace Hexlet\Code\StringConverter;
+namespace Differ\StringConverter;
 
 function convertToString($currentValue)
 {

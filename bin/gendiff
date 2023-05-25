@@ -1,8 +1,8 @@
 #!/usr/bin/env php
 <?php
 
-use function Hexlet\Code\HelpReader\readHelp;
-use function Hexlet\Code\DiffGenerator\generateDiff;
+use function Differ\HelpReader\readHelp;
+use function Differ\Differ\genDiff;
 use function cli\line;
 
 $autoloadPath1 = __DIR__ . '/../../../autoload.php';
@@ -18,6 +18,6 @@ $doc = readHelp();
 
 $args = Docopt::handle($doc, array('version'=>'Generate diff 1.0'));
 
-$result = generateDiff($args['<firstFile>'], $args['<secondFile>'], $args['--format']);
+$result = genDiff($args['<firstFile>'], $args['<secondFile>'], $args['--format']);
 
 line($result);

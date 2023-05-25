@@ -1,6 +1,6 @@
 <?php
 
-namespace Hexlet\Code\DiffArray;
+namespace Differ\DiffArray;
 
 function makeDiffArray($firstArray, $secondArray)
 {
