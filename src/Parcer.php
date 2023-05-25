@@ -25,6 +25,9 @@ function parceJson(mixed $pathToJson): array
         return [];
     } else {
         $data = file_get_contents($path);
+        if ($data === false) {
+            return [];
+        }
     }
 
     return json_decode($data, true);
