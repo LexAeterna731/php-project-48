@@ -20,12 +20,12 @@ function getData(mixed $filePath)
 
 function parceJson(mixed $pathToJson): array
 {
-    $data = realpath($pathToJson);
+    $data = file_get_contents(realpath($pathToJson));
     if ($data === false) {
         return [];
     }
 
-    return json_decode(file_get_contents($data), true);
+    return json_decode($data, true);
 }
 
 function parceYml(mixed $pathToYml): array
