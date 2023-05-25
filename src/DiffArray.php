@@ -19,8 +19,8 @@ function makeDiffArray($firstArray, $secondArray)
 
 function compareDiff($key, $firstArray, $secondArray)
 {
-    $firstVal = setValue($firstArray, $key);
-    $secondVal = setValue($secondArray, $key);
+    $firstVal = array_key_exists($key, $firstArray) ? $firstArray[$key] : null;
+    $secondVal = array_key_exists($key, $secondArray) ? $secondArray[$key] : null;
 
     if (!array_key_exists($key, $firstArray)) {
         $comparedElement = [
@@ -56,16 +56,4 @@ function compareDiff($key, $firstArray, $secondArray)
     }
 
     return $comparedElement;
-}
-
-function setValue(array $currentArray, string $key)
-{
-    if (!array_key_exists($key, $currentArray)) {
-        $result = null;
-    } else {
-        $result = !isset($currentArray[$key]) ? 'null' :
-                  (is_bool($currentArray[$key]) ? ($currentArray[$key] ? "true" : "false") : $currentArray[$key]);
-    }
-
-    return $result;
 }

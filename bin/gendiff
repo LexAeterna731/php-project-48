@@ -3,6 +3,7 @@
 
 use function Hexlet\Code\HelpReader\readHelp;
 use function Hexlet\Code\DiffGenerator\generateDiff;
+use function cli\line;
 
 $autoloadPath1 = __DIR__ . '/../../../autoload.php';
 $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
@@ -19,4 +20,4 @@ $args = Docopt::handle($doc, array('version'=>'Generate diff 1.0'));
 
 $result = generateDiff($args['<firstFile>'], $args['<secondFile>'], $args['--format']);
 
-print_r($result);
+line($result);

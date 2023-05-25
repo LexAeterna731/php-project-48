@@ -2,6 +2,8 @@
 
 namespace Hexlet\Code\Formatters\Stylish;
 
+use function Hexlet\Code\StringConverter\convertToString;
+
 function stylishFormat(array $diff): string
 {
     $iter = function ($currentDiff, $level) use (&$iter) {
@@ -13,7 +15,8 @@ function stylishFormat(array $diff): string
                     $indentEnd = makeIndent($level);
                     $line = "{$indent}{$key}: {\n{$arrayDiffValue}\n{$indentEnd}}";
                 } else {
-                    $line = "{$indent}{$key}: {$diffValue}";
+                    $stringDiffValue = convertToString($diffValue);
+                    $line = "{$indent}{$key}: {$stringDiffValue}";
                 }
 
                 return $line;
@@ -27,7 +30,7 @@ function stylishFormat(array $diff): string
 
     $formattedResult = $iter($diff, 1);
 
-    return "{\n{$formattedResult}\n}\n";
+    return "{\n{$formattedResult}\n}";
 }
 
 function makeIndent(int $level, string $symbol = ''): string

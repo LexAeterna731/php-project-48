@@ -2,6 +2,8 @@
 
 namespace Hexlet\Code\Formatters\Plain;
 
+use function Hexlet\Code\StringConverter\convertToString;
+
 function plainFormat(array $diff): string
 {
     $iter = function ($currentDiff, $way = null) use (&$iter) {
@@ -17,9 +19,9 @@ function plainFormat(array $diff): string
                     }
                 } else {
                     $currentValue = is_array($diffValue) ? "[complex value]" :
-                                    ((($diffValue === "true") ||
-                                      ($diffValue === "false") ||
-                                      ($diffValue === "null")) ? $diffValue : "'{$diffValue}'");
+                                    (is_string($diffValue) ? "'" . convertToString($diffValue) . "'" :
+                                    convertToString($diffValue));
+
                     if ($singleDiffSize === 1) {
                         if ($diffKey === "-") {
                             $singleDiffItem = "Property '{$currentWay}' was removed";
@@ -47,5 +49,5 @@ function plainFormat(array $diff): string
 
     $result = $iter($diff);
 
-    return "{$result}\n";
+    return $result;
 }
